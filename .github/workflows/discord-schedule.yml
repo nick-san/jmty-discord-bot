@@ -23,8 +23,13 @@ jobs:
 
     - name: Run jmty-discord.py
       run: python jmty-discord.py
-      run: python jmty-discord2.py
       env:
         DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
+
+    - name: Run jmty-discord2.py
+      run: python jmty-discord2.py
+      env:
         DISCORD_WEBHOOK_URL_1: ${{ secrets.DISCORD_WEBHOOK_URL_1 }}
+
+
 
