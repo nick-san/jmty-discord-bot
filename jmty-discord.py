@@ -50,5 +50,5 @@ def send_to_discord(items):
         requests.post(WEBHOOK_URL, data=json.dumps(payload), headers={"Content-Type": "application/json"})
 
 if __name__ == "__main__":
-    items = extract_latest_items()
+    items = extract_latest_items(url)
     send_to_discord(items)
