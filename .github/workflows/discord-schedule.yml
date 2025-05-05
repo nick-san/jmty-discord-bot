@@ -1,0 +1,28 @@
+name: Post JMty items to Discord
+
+on:
+  schedule:
+    - cron: '0 0 * * 1'  # 毎週月曜 日本時間9:00
+  workflow_dispatch:
+
+jobs:
+  post:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v3
+
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.10'
+
+    - name: Install dependencies
+      run: pip install -r requirements.txt
+
+    - name: Run jmty-discord.py
+      run: python jmty-discord.py
+      env:
+        DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
+
