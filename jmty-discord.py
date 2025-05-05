@@ -41,13 +41,17 @@ def extract_latest_items(url):
     return result
 
 def send_to_discord(items):
+    messages = []
     for i, item in enumerate(items, 1):
         msg = (
             f"**{i}. [{item['title']}]({item['url']})**\n"
             f"💴 {item['price']}｜📍 {item['location']}\n\n"
         )
-        payload = {"content": msg}
-        requests.post(WEBHOOK_URL, data=json.dumps(payload), headers={"Content-Type": "application/json"})
+        messages.append(msg
+
+    full_message ="\n---\n".join(messages)
+    payload = {"content": full_message}
+    requests.post(WEBHOOK_URL, data=json.dumps(payload), headers={"Content-Type": "application/json"})
 
 if __name__ == "__main__":
     items = extract_latest_items(url)
