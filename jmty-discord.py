@@ -47,7 +47,7 @@ def send_to_discord(items):
             f"**{i}. [{item['title']}]({item['url']})**\n"
             f"💴 {item['price']}｜📍 {item['location']}\n\n"
         )
-        messages.append(msg
+        messages.append(msg)
 
     full_message ="\n---\n".join(messages)
     payload = {"content": full_message}
