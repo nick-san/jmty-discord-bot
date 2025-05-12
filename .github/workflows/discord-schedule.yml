@@ -2,7 +2,7 @@ name: Post JMty items to Discord
 
 on:
   schedule:
-    - cron: '0 0 * * 1'  # 毎週月曜 日本時間9:00
+    - cron: '0 0 * * *'
   workflow_dispatch:
 
 jobs:
