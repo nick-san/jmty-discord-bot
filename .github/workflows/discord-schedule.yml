@@ -24,17 +24,22 @@ jobs:
     - name: Run jmty-car_parts-hakodate.py
       run: python jmty-car_parts-hakodate.py
       env:
-        DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
+        DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL_HAKODATE }}
 
     - name: Run jmty-car_parts-hokuto.py
       run: python jmty-car_parts-hokuto.py
       env:
-        DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
+        DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL_HOKUTO }}
 
     - name: Run jmty-car_parts-kameda.py
       run: python jmty-car_parts-kameda.py
       env:
-        DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
+        DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL_KAMEDA }}
+
+    - name: Run jmty-car_parts-kamiiso.py
+      run: python jmty-car_parts-kamiiso.py
+      env:
+        DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL_KAMIISO }}
 
     - name: Run jmty-under_100k_hokkaido.py
       run: python jmty-under_100k_hokkaido.py
