@@ -21,12 +21,12 @@ jobs:
     - name: Install dependencies
       run: pip install -r requirements.txt
 
-    - name: Run jmty-discord.py
+    - name: Run jmty-car_parts-hakodate.py
       run: python jmty-discord.py
       env:
         DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
 
-    - name: Run jmty-discord2.py
+    - name: Run jmty-under_100k_hokkaido.py
       run: python jmty-discord2.py
       env:
         DISCORD_WEBHOOK_URL_1: ${{ secrets.DISCORD_WEBHOOK_URL_1 }}
