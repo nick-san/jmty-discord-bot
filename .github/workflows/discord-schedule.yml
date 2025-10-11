@@ -21,25 +21,13 @@ jobs:
     - name: Install dependencies
       run: pip install -r requirements.txt
 
-    - name: Run jmty-car_parts-hakodate.py
-      run: python jmty-car_parts-hakodate.py
+    - name: Run jmty-car_parts.py
+      run: python jmty-car_parts.py
       env:
-        DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL_HAKODATE }}
-
-    - name: Run jmty-car_parts-hokuto.py
-      run: python jmty-car_parts-hokuto.py
-      env:
-        DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL_HOKUTO }}
-
-    - name: Run jmty-car_parts-kameda.py
-      run: python jmty-car_parts-kameda.py
-      env:
-        DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL_KAMEDA }}
-
-    - name: Run jmty-car_parts-kamiiso.py
-      run: python jmty-car_parts-kamiiso.py
-      env:
-        DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL_KAMIISO }}
+        DISCORD_WEBHOOK_URL_HAKODATE: ${{ secrets.DISCORD_WEBHOOK_URL_HAKODATE }}
+        DISCORD_WEBHOOK_URL_HOKUTO:   ${{ secrets.DISCORD_WEBHOOK_URL_HOKUTO   }}
+        DISCORD_WEBHOOK_URL_KAMIISO:  ${{ secrets.DISCORD_WEBHOOK_URL_KAMIISO  }}
+        DISCORD_WEBHOOK_URL_KAMEDA:   ${{ secrets.DISCORD_WEBHOOK_URL_KAMEDA   }}
 
     - name: Run jmty-under_100k_hokkaido.py
       run: python jmty-under_100k_hokkaido.py
