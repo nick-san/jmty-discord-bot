@@ -13,7 +13,7 @@ TARGETS = [
     },
     {
         "name": "北斗",
-        "url": "https://jmty.jp/hokkaido/sale-auto/g-all/a-2-hokuto",
+        "url": "https://jmty.jp/hokkaido/sale-auto/g-all/a-35-hokuto",
         "webhook_env": "DISCORD_WEBHOOK_URL_HOKUTO"
     },
     {
