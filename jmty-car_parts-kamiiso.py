@@ -4,7 +4,7 @@ from bs4 import BeautifulSoup
 import json
 import os
 
-WEBHOOK_URL = os.getenv("DISCORD_WEBHOOK_URL_KAMIISO")
+WEBHOOK_URL = os.getenv("DISCORD_WEBHOOK_URL")
 url = "https://jmty.jp/hokkaido/sale-auto/g-all/a-89208-kamiiso"
 
 def extract_latest_items(url):
