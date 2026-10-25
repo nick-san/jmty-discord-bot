@@ -1,0 +1,21 @@
+# ジモティー 自動車パーツ新着監視設定
+targets:
+  - name: 函館
+    url: https://jmty.jp/hokkaido/sale-auto/g-all/a-2-hakodate
+    webhook_env: DISCORD_WEBHOOK_URL_HAKODATE
+    limit: 15
+
+  - name: 北斗
+    url: https://jmty.jp/hokkaido/sale-auto/g-all/a-35-hokuto
+    webhook_env: DISCORD_WEBHOOK_URL_HOKUTO
+    limit: 15
+
+  - name: 上磯
+    url: https://jmty.jp/hokkaido/sale-auto/g-all/a-89208-kamiiso
+    webhook_env: DISCORD_WEBHOOK_URL_KAMIISO
+    limit: 15
+
+  - name: 亀田
+    url: https://jmty.jp/hokkaido/sale-auto/g-all/a-89209-kameda
+    webhook_env: DISCORD_WEBHOOK_URL_KAMEDA
+    limit: 15

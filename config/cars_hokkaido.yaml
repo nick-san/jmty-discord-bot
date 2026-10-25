@@ -1,0 +1,14 @@
+# ジモティー 北海道 15万円以下の自動車(MT車等)監視設定
+title: "☆ジモティー 新着商品情報のお届け☆"
+webhook_env: DISCORD_WEBHOOK_URL_1
+limit: 20
+
+# 監視対象URLリスト
+urls:
+  - "https://jmty.jp/hokkaido/car?model_year%5Bmin%5D=&model_year%5Bmax%5D=&mileage%5Bmin%5D=&mileage%5Bmax%5D=&min=&max=150000&commit=%E6%A4%9C%E7%B4%A2"
+
+# 絞り込みキーワード（タイトルまたは本文に含まれるもの）
+keywords:
+  - MT
+  - mt
+  - マニュアル
